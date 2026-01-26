@@ -33,7 +33,6 @@ const services = [
 ];
 
 const technologies = [
-	// Frontend
 	{
 		name: "React JS",
 		icon: "/tech/reactjs.webp",
@@ -43,32 +42,21 @@ const technologies = [
 		icon: "/tech/nextjs.svg",
 	},
 	{
-		name: "TypeScript",
-		icon: "/tech/typescript.webp",
+		name: "MongoDB",
+		icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg",
 	},
 	{
-		name: "Tailwind CSS",
-		icon: "/tech/tailwind.webp",
+		name: "PostgreSQL",
+		icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg",
 	},
-	// Mobile
 	{
-		name: "Flutter",
-		icon: "/tech/flutter.webp",
-	},
-	// Backend
-	{
-		name: ".NET",
+		name: ".NET Core",
 		icon: "/tech/dotnet.webp",
 	},
 	{
 		name: "Node.js",
 		icon: "/tech/nodejs.webp",
 	},
-	{
-		name: "Python",
-		icon: "/tech/python.webp",
-	},
-	// IoT & Data
 	{
 		name: "MQTT",
 		icon: "/tech/mqtt.webp",
@@ -77,7 +65,14 @@ const technologies = [
 		name: "InfluxDB",
 		icon: "/tech/influxdb.webp",
 	},
-	// Cloud & DevOps
+	{
+		name: "DevOps (Docker)",
+		icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg",
+	},
+	{
+		name: "Python",
+		icon: "/tech/python.webp",
+	},
 	{
 		name: "AWS",
 		icon: "/tech/aws.svg",
