@@ -106,6 +106,33 @@ const Contact = () => {
         <p className="heroSubText">Get in Touch</p>
         <h3 className="heroHeadText">Contact.</h3>
 
+        {/* Contact Details */}
+        <div className="mt-8 flex flex-wrap gap-10">
+          <div className="flex flex-col gap-2">
+            <p className="text-secondary font-medium">Email</p>
+            <a href="mailto:indiantechdigi@gmail.com" className="text-white hover:text-[#915EFF] transition-colors">
+              indiantechdigi@gmail.com
+            </a>
+          </div>
+          <div className="flex flex-col gap-2">
+            <p className="text-secondary font-medium">Phone</p>
+            <a href="tel:+919361072610" className="text-white hover:text-[#915EFF] transition-colors">
+              +91-9361072610
+            </a>
+          </div>
+          <div className="flex flex-col gap-2">
+            <p className="text-secondary font-medium">Socials</p>
+            <div className="flex gap-4">
+              <a href="https://linkedin.com/in/indian-m" target="_blank" rel="noreferrer" className="text-white hover:text-[#915EFF] transition-colors">
+                LinkedIn
+              </a>
+              <a href="https://github.com/Indian-1234" target="_blank" rel="noreferrer" className="text-white hover:text-[#915EFF] transition-colors">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
         <form
           ref={formRef}
           onSubmit={handleSubmit}
