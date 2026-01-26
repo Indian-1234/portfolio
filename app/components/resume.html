@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian M - Resume</title>
+    <!-- Font Awesome for icons if needed -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #000;
+            line-height: 1.22;
+            font-size: 10pt;
+        }
+
+        .page {
+            background: white;
+            width: 8.5in;
+            height: 11in;
+            margin: 15px auto;
+            padding: 0.45in 0.5in;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Elements */
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 24pt;
+            font-weight: normal;
+            margin: 0 0 4px 0;
+            letter-spacing: 0.5px;
+            text-transform: capitalize;
+        }
+
+        .contact-info {
+            font-size: 10pt;
+            margin-bottom: 0;
+        }
+
+        .contact-info span {
+            margin: 0 3px;
+        }
+
+        /* Sections */
+        h2 {
+            font-size: 11pt;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            margin: 10px 0 5px 0;
+            padding-bottom: 2px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        /* Entries */
+        .entry {
+            margin-bottom: 8px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 100%;
+        }
+
+        .entry-title {
+            font-weight: bold;
+            font-size: 10.5pt;
+        }
+
+        .entry-location {
+            font-weight: bold;
+            font-size: 10.5pt;
+            text-align: right;
+        }
+
+        .entry-subheader {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 100%;
+            margin-bottom: 2px;
+        }
+
+        .entry-role {
+            font-style: italic;
+            font-size: 10.5pt;
+        }
+
+        .entry-date {
+            font-style: italic;
+            font-size: 10.5pt;
+            text-align: right;
+        }
+
+        /* Lists */
+        ul {
+            margin: 2px 0 0 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 2px;
+            padding-left: 2px;
+        }
+
+        /* Skills */
+        .skills-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .skill-row {
+            display: flex;
+        }
+
+        .skill-label {
+            font-weight: bold;
+            margin-right: 5px;
+            white-space: nowrap;
+        }
+
+        .skill-list {
+            display: inline;
+        }
+
+        /* Print Settings */
+        @media print {
+            body {
+                background: none;
+                margin: 0;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                width: auto;
+                height: auto;
+                border: none;
+            }
+
+            .download-btn {
+                display: none;
+            }
+
+            /* Force exact margins for print */
+            @page {
+                margin: 0.5in;
+                size: portrait;
+            }
+        }
+
+        /* Download Button */
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-family: sans-serif;
+            z-index: 1000;
+        }
+
+        .download-btn:hover {
+            background: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="download-btn" id="downloadBtn">Download PDF</button>
+
+    <div class="page">
+        <!-- Header -->
+        <header>
+            <h1>Indian M</h1>
+            <div class="contact-info">
+                <span>+91-9361072610</span> |
+                <a href="mailto:indiantechdigi@gmail.com">indiantechdigi@gmail.com</a> |
+                <a href="https://linkedin.com/in/indian-m">linkedin.com/in/indian-m</a>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section>
+            <h2>Summary</h2>
+            <div class="entry">
+                <p style="margin: 0;">Full Stack & IoT Engineer with 2 years of experience specializing in
+                    production-grade web applications and real-time IoT platforms like BMS and ERP systems. Shown
+                    ownership across design, development, and deployment of industrial automation software using Java,
+                    C#, .NET Core, and cloud platforms. Sustained results by contributing scalable solutions supporting
+                    500+ users with 99.9% uptime.</p>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2>Education</h2>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Park College of Engineering</span>
+                    <span class="entry-location">Coimbatore, Tamil Nadu</span>
+                </div>
+                <div class="entry-subheader">
+                    <span class="entry-role">Bachelor of Engineering in Computer Science; CGPA: 7.4/10</span>
+                    <span class="entry-date">Aug. 2020 – May 2024</span>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Government Higher Secondary School</span>
+                    <span class="entry-location">Krishnagiri, Tamil Nadu</span>
+                </div>
+                <div class="entry-subheader">
+                    <span class="entry-role">Higher Secondary (12th); 70%</span>
+                    <span class="entry-date">Jun. 2019 – May 2020</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section>
+            <h2>Experience</h2>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Sustainabyte Private Limited</span>
+                    <span class="entry-location">Chennai, Tamil Nadu</span>
+                </div>
+                <div class="entry-subheader">
+                    <span class="entry-role">Full Stack Software Engineer</span>
+                    <span class="entry-date">Dec. 2024 – Present</span>
+                </div>
+                <ul>
+                    <li>Spearheaded full-stack SaaS modules using Next.js, Spring Boot, and .NET Core to
+                        support 500+ active concurrent users.</li>
+                    <li>Incorporated Azure and AWS cloud services via custom C# and Java APIs to process over 10,000
+                        data
+                        records daily.</li>
+                    <li>Architected IoT data pipelines using MQTT and InfluxDB for real-time dashboards, reducing system
+                        response latency by 35%.</li>
+                    <li>Ensured high-availability RESTful microservices using .NET and Spring Boot, maintaining a
+                        consistent 99.9% uptime record.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Xentrix High-Tech Private Limited</span>
+                    <span class="entry-location">Coimbatore, Tamil Nadu</span>
+                </div>
+                <div class="entry-subheader">
+                    <span class="entry-role">Software Engineer</span>
+                    <span class="entry-date">Jan. 2024 – Sep. 2024</span>
+                </div>
+                <ul>
+                    <li>Developed backend services with Spring Boot and Node.js, handling 5,000+ daily requests with
+                        sub-200ms response times.</li>
+                    <li>Automated internal ERP and BPO workflows using Java, resulting in a 45% reduction in manual
+                        processing requirements.</li>
+                    <li>Orchestrated microservice deployment using Docker across the full software development life
+                        cycle (SDLC).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section>
+            <h2>Projects</h2>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Energy Management System (BMS) <span
+                            style="font-style: italic; font-weight: normal; font-size: 10pt;">| .NET Core, C#,
+                            Next.js, Azure, IoT</span></span>
+                    <span class="entry-date"
+                        style="font-weight: normal; font-style: normal; font-size: 10pt;">2025</span>
+                </div>
+                <ul>
+                    <li>Engineered a software-focused architecture using .NET Core for MQTT data ingestion, processing,
+                        and
+                        visualization from 50+ IoT devices.</li>
+                    <li>Maximized energy efficiency by 25% through real-time InfluxDB monitoring and interactive Next.js
+                        dashboards.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">ERP Platform for BPO Operations <span
+                            style="font-style: italic; font-weight: normal; font-size: 10pt;">| Java, Spring Boot,
+                            Next.js, MongoDB</span></span>
+                    <span class="entry-date"
+                        style="font-weight: normal; font-style: normal; font-size: 10pt;">2024</span>
+                </div>
+                <ul>
+                    <li>Established a custom ERP platform from scratch to automate document processing and BPO file
+                        allocation workflows.</li>
+                    <li>Deployed scalable backend APIs using Java and Spring Boot for real-time tracking of file status
+                        and
+                        operational progress.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Smart Reply Automation <span
+                            style="font-style: italic; font-weight: normal; font-size: 10pt;">| Python, Node.js,
+                            Next.js, AI API Integration</span></span>
+                    <span class="entry-date"
+                        style="font-weight: normal; font-style: normal; font-size: 10pt;">2024</span>
+                </div>
+                <ul>
+                    <li>Leveraged AI models via API with Python and Node.js to automate intelligent customer inquiry
+                        responses.</li>
+                    <li>Augmented workflow efficiency by automating high-volume repetitive replies based on historical
+                        interaction data.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">Welding Automation <span
+                            style="font-style: italic; font-weight: normal; font-size: 10pt;">| Flutter, ESP32, MQTT,
+                            C#</span></span>
+                    <span class="entry-date"
+                        style="font-weight: normal; font-style: normal; font-size: 10pt;">2024</span>
+                </div>
+                <ul>
+                    <li>Crafted a Flutter mobile app and C# backend for remote control of ESP32 welding systems via
+                        Bluetooth/MQTT.</li>
+                </ul>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-title">TRB TNPSC Mobile & Web App <span
+                            style="font-style: italic; font-weight: normal; font-size: 10pt;">| MERN
+                            Stack</span></span>
+                    <span class="entry-date"
+                        style="font-weight: normal; font-style: normal; font-size: 10pt;">2023</span>
+                </div>
+                <ul>
+                    <li>Implemented a full-stack MERN application for exam preparation with user authentication and
+                        performance analytics.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-section">
+                <div class="skill-row">
+                    <span class="skill-label">Languages:</span>
+                    <span class="skill-list">Java, C#, JavaScript, Python, HTML/CSS, SQL</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Frameworks:</span>
+                    <span class="skill-list">.NET Core, Spring Boot, Node.js, React, Next.js, Flutter</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Databases:</span>
+                    <span class="skill-list">MongoDB, SQL Server, MySQL, InfluxDB, Redis</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Cloud & DevOps:</span>
+                    <span class="skill-list">AWS, Azure, Docker, Jenkins, Git, CI/CD</span>
+                </div>
+                <div class="skill-row">
+                    <span class="skill-label">Technologies:</span>
+                    <span class="skill-list">REST APIs, Microservices, IoT, MQTT, ESP32</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function () {
+            window.print();
+        });
+    </script>
+</body>
+
+</html>

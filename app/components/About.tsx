@@ -54,7 +54,7 @@ const About = () => {
 				variants={fadeIn("", "", 0.1, 1)}
 				className="mt-4 text-secondary text-[17px] max-w-[3xl] leading-[30px]"
 			>
-				Senior Full-Stack Software Engineer specializing in end-to-end application development from architecture design to deployment. Expertise in building scalable web and mobile solutions using React, Next.js, Node.js, Python, Flutter, and .NET. Proficient in DevOps practices with Docker, Jenkins, and CI/CD pipelines on AWS and Azure. Demonstrated success in architecting and delivering complex systems including IoT-based automation, ERP platforms, and Building Management Systems (BMS) with MQTT and InfluxDB integration. Currently leading technical implementation and team coordination while delivering high-impact solutions for industrial clients including PMEL, Royal Enfield, and Wheel India.
+				Full Stack & IoT Engineer with 2 years of experience building end-to-end systems across web, mobile, and industrial platforms. I work with React, Next.js, .NET, Flutter, and Python to deliver complete solutions from architecture to deployment. My focus is on real-time data systems, including Building Management Systems (BMS) with MQTT-based data ingestion using InfluxDB and time-series processing. I handle infrastructure on AWS and Azure with CI/CD pipelines through GitHub Actions and Jenkins. Currently building industrial IoT platforms and coordinating technical implementation for clients in manufacturing and building automation.
 			</motion.p>
 			<div className="mt-20 flex flex-wrap gap-10">
 				{services.map((service, index) => (
