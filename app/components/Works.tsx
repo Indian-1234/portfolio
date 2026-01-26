@@ -19,7 +19,7 @@ type ProjectCardProps = {
 	image: string;
 	source_code_link?: string;
 	deploy_link: string;
-	platform: "Netlify"|"IoT Web Application" | "Vercel" | "Figma" | "Wordpress" | "Web" | "Full Stack Web" | "Mobile" | "Desktop" | "AI Integration" | "Web Application" | "Mobile & Web App";
+	platform: "Netlify" | "IoT Web Application" | "Vercel" | "Figma" | "Wordpress" | "Web" | "Full Stack Web" | "Mobile" | "Desktop" | "AI Integration" | "Web Application" | "Mobile & Web App";
 };
 
 const ProjectCard = ({
@@ -33,7 +33,7 @@ const ProjectCard = ({
 	platform
 }: ProjectCardProps) => {
 	return (
-		<motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+		<motion.div variants={fadeIn("up", "spring", index * 0.3, 0.75)}>
 			<Tilt
 				options={{
 					max: 45,
@@ -131,4 +131,4 @@ const Works = () => {
 	);
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "work");
