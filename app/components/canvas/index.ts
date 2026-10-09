@@ -4,3 +4,5 @@ import EarthCanvas from "./Earth";
 import StarsCanvas from "./Stars";
 
 export { BallCanvas, ComputersCanvas, EarthCanvas, StarsCanvas };
+
+export { LazyEarthCanvas, LazyStarsCanvas } from "./LazyCanvases";

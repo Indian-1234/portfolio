@@ -47,14 +47,14 @@ const About = () => {
 		<>
 			<motion.div variants={textVariant()}>
 				<p className="sectionSubText">Introduction</p>
-				<h2 className="styles.sectionHeadText">Overview.</h2>
+				<h2 className="sectionHeadText">Overview.</h2>
 			</motion.div>
 
 			<motion.p
 				variants={fadeIn("", "", 0.1, 1)}
 				className="mt-4 text-secondary text-[17px] max-w-[3xl] leading-[30px]"
 			>
-				Full Stack & IoT Engineer with 2 years of experience building end-to-end systems across web, mobile, and industrial platforms. I work with React, Next.js, .NET, Flutter, and Python to deliver complete solutions from architecture to deployment. My focus is on real-time data systems, including Building Management Systems (BMS) with MQTT-based data ingestion using InfluxDB and time-series processing. I handle infrastructure on AWS and Azure with CI/CD pipelines through GitHub Actions and Jenkins. Currently building industrial IoT platforms and coordinating technical implementation for clients in manufacturing and building automation.
+				Industrial IoT Software Engineer with 3 years of experience building end-to-end systems across web, mobile and industrial platforms. I work on the software side of IoT — MQTT data ingestion, time-series storage, alarm logic and real-time dashboards — using .NET, Python, Next.js, React and Flutter. I have led a team of 4 engineers, owning architecture decisions, code reviews and delivery. I deploy on AWS and Azure with CI/CD through GitHub Actions and Jenkins, and I am currently preparing for the AWS Solutions Architect – Associate certification.
 			</motion.p>
 			<div className="mt-20 flex flex-wrap gap-10">
 				{services.map((service, index) => (

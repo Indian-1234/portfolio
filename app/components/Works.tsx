@@ -41,7 +41,7 @@ const ProjectCard = ({
 					src={image}
 					width={1000}
 					height={1000}
-					alt="project_image"
+					alt={`${name} project screenshot`}
 					className="w-full h-full object-cover rounded-2xl"
 				/>
 
@@ -50,13 +50,15 @@ const ProjectCard = ({
 						<Link
 							href={source_code_link}
 							target="_blank"
+							rel="noopener noreferrer"
+							aria-label={`${name} source code on GitHub`}
 							className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-transform"
 						>
 							<Image
 								src="/tech/github.webp"
 								width={24}
 								height={24}
-								alt="source-code"
+								alt=""
 								className="object-contain"
 							/>
 						</Link>
@@ -65,13 +67,15 @@ const ProjectCard = ({
 						<Link
 							href={deploy_link}
 							target="_blank"
+							rel="noopener noreferrer"
+							aria-label={`${name} live demo`}
 							className="black-gradient w-10 h-10 ml-2 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-transform"
 						>
 							<Image
 								src={platform === "Netlify" ? "/tech/netlify.webp" : platform === "Vercel" ? "/tech/vercel.svg" : platform === "Wordpress" ? "/tech/wordpress.webp" : platform === "Web" ? "/web.webp" : "/tech/figma.webp"}
 								width={24}
 								height={24}
-								alt="source code"
+								alt=""
 								className="object-contain"
 							/>
 						</Link>
@@ -111,11 +115,10 @@ const Works = () => {
 					variants={fadeIn("", "", 0.1, 1)}
 					className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
 				>
-					Following projects showcases my skills and experience through
-					real-world examples of my work. Each project is briefly described with
-					links to code repositories and live demos in it. It reflects my
-					ability to solve complex problems, work with different technologies,
-					and manage projects effectively.
+					A selection of systems I&apos;ve designed and built — from real-time
+					industrial IoT platforms to full stack business applications. Company
+					projects are described at a high level to respect client
+					confidentiality.
 				</motion.p>
 			</div>
 

@@ -2,12 +2,13 @@ import {
 	About,
 	Contact,
 	Experience,
+	Education,
 	Feedbacks,
 	Hero,
 	Navbar,
 	Tech,
 	Works,
-	StarsCanvas,
+	LazyStarsCanvas,
 } from "./components";
 
 export default function Home() {
@@ -22,9 +23,10 @@ export default function Home() {
 			<Tech />
 			<Works />
 			<Feedbacks />
+			<Education />
 			<div className="relative z-0">
 				<Contact />
-				<StarsCanvas />
+				<LazyStarsCanvas />
 			</div>
 		</div>
 	);

@@ -31,19 +31,25 @@ const FeedbackCard = ({
 		<div className="mt-1 ">
 			<p className="text-white tracking-wider text-[18px]">{testimonial}</p>
 			<div className="mt-7 flex justify-between items-center gap-1">
-				<div className="flex-1 flex flex-col">
-					<p className="text-white font-medium text-[16px]">
+				<div className="flex-1 min-w-0 flex flex-col">
+					<p className="text-white font-medium text-[16px] break-all">
 						<span className="blue-text-gradient">@</span>
 						{name}
 					</p>
 				</div>
-				<Link href={link}>
+				<Link
+					href={link}
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label={`Open ${name}`}
+					className="flex shrink-0 items-center justify-center w-11 h-11"
+				>
 					<Image
 						src={image}
 						width={40}
 						height={40}
-						alt={`feedback by ${name}`}
-						className="w-10 h-10 rounded-full object-cover "
+						alt={`${name} profile link`}
+						className="w-11 h-11 rounded-full object-cover"
 					/>
 				</Link>
 			</div>
@@ -58,7 +64,7 @@ const Feedbacks = () => {
 				<motion.div variants={textVariant()}>
 					<h2 className="sectionHeadText">Social Profiles</h2>
 					<p className="sectionSubText">
-						Click on social media icons to check out..
+						Find me online
 					</p>
 				</motion.div>
 			</div>

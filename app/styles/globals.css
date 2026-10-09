@@ -16,15 +16,21 @@
   }
 
   .heroHeadText {
-    @apply font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2;
+    @apply font-black text-white mt-2;
+    font-size: clamp(34px, 8.5vw, 80px);
+    line-height: 1.12;
   }
 
   .heroSubText {
-    @apply text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px];
+    @apply text-[#dfd9ff] font-medium;
+    font-size: clamp(17px, 3.4vw, 30px);
+    line-height: 1.35;
   }
 
   .sectionHeadText {
-    @apply text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px];
+    @apply text-white font-black;
+    font-size: clamp(30px, 6vw, 60px);
+    line-height: 1.15;
   }
 
   .sectionSubText {
@@ -32,6 +38,12 @@
   }
 }
 
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 * {
   margin: 0;
@@ -250,4 +262,48 @@
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+/* ---- Hero IoT pipeline ---- */
+@keyframes pipeNodeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pipeHalo {
+  0%, 100% { opacity: 0.15; r: 30; }
+  50%      { opacity: 0.45; r: 34; }
+}
+
+.pipe-node {
+  opacity: 0;
+  animation: pipeNodeIn 0.6s ease-out forwards;
+}
+
+.pipe-halo {
+  animation: pipeHalo 3s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ---- Accessibility: honour reduced-motion everywhere ---- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-float,
+  .animate-pulse {
+    animation: none !important;
+  }
+
+  /* Static pipeline: nodes visible, data dots parked */
+  .pipe-node { opacity: 1 !important; animation: none !important; }
+  .pipe-halo { animation: none !important; }
+  .iot-pipeline .pipe-dot { display: none; }
 }

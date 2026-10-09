@@ -35,24 +35,24 @@ const Navbar = () => {
 			<div className="w-full flex justify-between items-center max-w-7xl mx-auto">
 				{/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 				<div
-					className="flex items-center gap-2"
+					className="flex items-center gap-2 min-w-0 flex-shrink"
 					onClick={() => {
 						setActive("");
 						window.scrollTo(0, 0);
 					}}
 				>
-					<Link href="https://github.com/Indian-1234">
+					<Link href="https://github.com/Indian-1234" target="_blank" rel="noopener noreferrer">
 						<Image
 							src="/logo.png"
 							width={80}
 							height={80}
-							alt="logo"
+							alt="Indian Manokaran logo"
 							priority
-							className="object-contain"
+							className="object-contain w-[52px] h-[52px] sm:w-20 sm:h-20"
 						/>
 					</Link>
-					<p className="text-white text-[18px] font-bold cursor-pointer flex">
-						Techie &nbsp; <span className="sm:block hidden ">| Indian Manokaran</span>
+					<p className="text-white text-[15px] sm:text-[18px] font-bold cursor-pointer whitespace-nowrap">
+						Indian&nbsp;Manokaran
 					</p>
 				</div>
 
@@ -74,15 +74,22 @@ const Navbar = () => {
 					<ResumeButton />
 				</div>
 
-				<div className="sm:hidden flex flex-1 justify-end items-center">
-					<Image
-						src={toggle ? "/close.svg" : "/menu.svg"}
-						width={28}
-						height={28}
-						alt="menu"
-						className="w-[28px] h-[28px] object-contain"
+				<div className="sm:hidden flex flex-1 justify-end items-center flex-shrink-0">
+					<button
+						type="button"
+						aria-label={toggle ? "Close menu" : "Open menu"}
+						aria-expanded={toggle}
 						onClick={() => setToggle(!toggle)}
-					/>
+						className="w-11 h-11 -mr-2 flex items-center justify-center"
+					>
+						<Image
+							src={toggle ? "/close.svg" : "/menu.svg"}
+							width={28}
+							height={28}
+							alt=""
+							className="w-[28px] h-[28px] object-contain"
+						/>
+					</button>
 
 					<div
 						className={`${

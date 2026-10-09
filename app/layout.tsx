@@ -7,14 +7,65 @@ const fontSans = FontSans({
 	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 	variable: "--font-sans",
 });
+
+const SITE_URL = "https://portfolio-phi-ten-17.vercel.app";
+const TITLE = "Indian Manokaran | Industrial IoT Software Engineer";
+const DESCRIPTION =
+	"Indian Manokaran — Industrial IoT Software Engineer building real-time MQTT systems, BMS platforms and full stack web & mobile apps with .NET, Next.js, Python and AWS.";
+
 export const metadata: Metadata = {
-	title: "Indian M | Full Stack & IoT Engineer",
-	description: "Full Stack & IoT Engineer specializing in real-time systems, Building Management Systems (BMS), MQTT data processing, and cloud infrastructure. Experienced with React, Next.js, .NET, Flutter, Python, AWS, and Azure.",
-	keywords: ["Full Stack Engineer", "IoT Engineer", "BMS Developer", "MQTT", "Real-Time Systems", "AWS", "Azure", "Next.js", "React", ".NET", "Flutter"],
+	metadataBase: new URL(SITE_URL),
+	title: TITLE,
+	description: DESCRIPTION,
+	applicationName: "Indian Manokaran Portfolio",
+	authors: [{ name: "Indian Manokaran", url: SITE_URL }],
+	creator: "Indian Manokaran",
+	keywords: [
+		"Indian Manokaran",
+		"Industrial IoT Software Engineer",
+		"Industrial IoT",
+		"IoT Engineer",
+		"BMS Developer",
+		"Building Management System",
+		"MQTT",
+		"InfluxDB",
+		"Real-Time Systems",
+		"Full Stack Developer",
+		"AWS",
+		"Azure",
+		"Next.js",
+		"React",
+		".NET",
+		"Flutter",
+	],
+	alternates: {
+		canonical: SITE_URL,
+	},
 	openGraph: {
-		title: "Indian M | Full Stack & IoT Engineer",
-		description: "Building real-time IoT systems and industrial platforms with modern web technologies.",
 		type: "website",
+		url: SITE_URL,
+		siteName: "Indian Manokaran",
+		title: TITLE,
+		description: DESCRIPTION,
+		locale: "en_US",
+		images: [
+			{
+				url: "/og.png",
+				width: 1200,
+				height: 630,
+				alt: "Indian Manokaran — Industrial IoT Software Engineer",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: TITLE,
+		description: DESCRIPTION,
+		images: ["/og.png"],
+	},
+	robots: {
+		index: true,
+		follow: true,
 	},
 };
 

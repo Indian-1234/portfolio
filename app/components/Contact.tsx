@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState } from "react";
 import { SectionWrapper } from "./HigherOrderComponents";
-import { EarthCanvas } from "./canvas";
+import { LazyEarthCanvas } from "./canvas";
 import { CheckCircle, X } from "lucide-react";
 
 const Contact = () => {
@@ -18,6 +18,7 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -29,6 +30,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+    setError("");
 
     emailjs
       .send(
@@ -36,7 +38,7 @@ const Contact = () => {
         "template_ns3xuuk",
         {
           from_name: form.name,
-          to_name: "Indian M",
+          to_name: "Indian Manokaran",
           from_email: form.email,
           to_email: "indiantechdigi@gmail.com",
           message: form.message,
@@ -52,11 +54,11 @@ const Contact = () => {
         // Auto-hide toast after 5 seconds
         setTimeout(() => setSuccess(false), 5000);
       })
-      .catch((error) => {
+      .catch((err) => {
         setLoading(false);
-        console.error("Email send error:", error);
-        alert(
-          "Sorry! Something went wrong. Please try again or email me directly at indiantechdigi@gmail.com"
+        console.error("Email send error:", err);
+        setError(
+          "Sorry, the message didn't go through. Please email me directly at indiantechdigi@gmail.com"
         );
       });
   };
@@ -110,23 +112,17 @@ const Contact = () => {
         <div className="mt-8 flex flex-wrap gap-10">
           <div className="flex flex-col gap-2">
             <p className="text-secondary font-medium">Email</p>
-            <a href="mailto:indiantechdigi@gmail.com" className="text-white hover:text-[#915EFF] transition-colors">
+            <a href="mailto:indiantechdigi@gmail.com" className="text-white hover:text-[#915EFF] transition-colors inline-flex items-center min-h-[44px]">
               indiantechdigi@gmail.com
-            </a>
-          </div>
-          <div className="flex flex-col gap-2">
-            <p className="text-secondary font-medium">Phone</p>
-            <a href="tel:+919361072610" className="text-white hover:text-[#915EFF] transition-colors">
-              +91-9361072610
             </a>
           </div>
           <div className="flex flex-col gap-2">
             <p className="text-secondary font-medium">Socials</p>
             <div className="flex gap-4">
-              <a href="https://linkedin.com/in/indian-m" target="_blank" rel="noreferrer" className="text-white hover:text-[#915EFF] transition-colors">
+              <a href="https://linkedin.com/in/indian-m" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#915EFF] transition-colors inline-flex items-center min-h-[44px]">
                 LinkedIn
               </a>
-              <a href="https://github.com/Indian-1234" target="_blank" rel="noreferrer" className="text-white hover:text-[#915EFF] transition-colors">
+              <a href="https://github.com/Indian-1234" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#915EFF] transition-colors inline-flex items-center min-h-[44px]">
                 GitHub
               </a>
             </div>
@@ -139,7 +135,7 @@ const Contact = () => {
           className="mt-12 flex flex-col gap-8"
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Name.</span>
+            <span className="text-white font-medium mb-4">Your name</span>
             <input
               type="text"
               name="name"
@@ -152,7 +148,7 @@ const Contact = () => {
           </label>
 
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Email.</span>
+            <span className="text-white font-medium mb-4">Your email</span>
             <input
               type="email"
               name="email"
@@ -165,7 +161,7 @@ const Contact = () => {
           </label>
 
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Your Message.</span>
+            <span className="text-white font-medium mb-4">Your message</span>
             <textarea
               rows={7}
               name="message"
@@ -176,6 +172,15 @@ const Contact = () => {
               required
             />
           </label>
+
+          {error && (
+            <p
+              role="alert"
+              className="text-[#ff9f9f] text-[14px] bg-red-500/10 border border-red-400/30 rounded-lg px-4 py-3"
+            >
+              {error}
+            </p>
+          )}
 
           <button
             type="submit"
@@ -190,9 +195,9 @@ const Contact = () => {
       {/* Earth Canvas */}
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        className="hidden md:block xl:flex-1 xl:h-auto md:h-[550px]"
       >
-        <EarthCanvas />
+        <LazyEarthCanvas />
       </motion.div>
     </div>
   );
