@@ -17,7 +17,7 @@ type ProjectCardProps = {
 	}[];
 	image: string;
 	source_code_link?: string;
-	deploy_link: string;
+	deploy_link?: string;
 	platform: "Netlify" | "IoT Web Application" | "Vercel" | "Figma" | "Wordpress" | "Web" | "Full Stack Web" | "Mobile" | "Desktop" | "AI Integration" | "Web Application" | "Mobile & Web App";
 };
 
@@ -61,19 +61,21 @@ const ProjectCard = ({
 							/>
 						</Link>
 					)}
-					<Link
-						href={deploy_link}
-						target="_blank"
-						className="black-gradient w-10 h-10 ml-2 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-transform"
-					>
-						<Image
-							src={platform === "Netlify" ? "/tech/netlify.webp" : platform === "Vercel" ? "/tech/vercel.svg" : platform === "Wordpress" ? "/tech/wordpress.webp" : platform === "Web" ? "/web.webp" : "/tech/figma.webp"}
-							width={24}
-							height={24}
-							alt="source code"
-							className="object-contain"
-						/>
-					</Link>
+					{deploy_link && (
+						<Link
+							href={deploy_link}
+							target="_blank"
+							className="black-gradient w-10 h-10 ml-2 rounded-full flex justify-center items-center cursor-pointer hover:scale-110 transition-transform"
+						>
+							<Image
+								src={platform === "Netlify" ? "/tech/netlify.webp" : platform === "Vercel" ? "/tech/vercel.svg" : platform === "Wordpress" ? "/tech/wordpress.webp" : platform === "Web" ? "/web.webp" : "/tech/figma.webp"}
+								width={24}
+								height={24}
+								alt="source code"
+								className="object-contain"
+							/>
+						</Link>
+					)}
 				</div>
 			</div>
 

@@ -117,10 +117,9 @@ const experiences = [
 		iconBg: "#383E56",
 		date: "Dec 2024 - Present",
 		points: [
-			"Developed Bluetooth interlocking system mobile app and PMEL welding tracking system using Flutter with custom analytics dashboards.",
+			"Developed Bluetooth interlocking system mobile app and an industrial welding tracking system using Flutter with custom analytics dashboards.",
 			"Building comprehensive BMS platform covering HVAC, STP, WTP, Lift, UPS, and Battery Management using .NET, InfluxDB, Next.js, and Python for real-time MQTT data ingestion and processing.",
 			"Identified critical architectural issues in existing BMS product and redesigned the system for improved scalability and reliability.",
-			"Built TRB TNPSC exam management system with Flutter mobile app and MERN stack web portal from scratch.",
 			"Set up CI/CD pipelines using GitHub Actions and Jenkins, deploying applications on AWS and Azure.",
 			"Coordinating technical decisions, conducting code reviews, and supporting team members on implementation."
 		],
@@ -163,11 +162,11 @@ const projects: {
 	}[];
 	image: string;
 	source_code_link?: string;
-	deploy_link: string;
+	deploy_link?: string;
 	platform: "Netlify" | "IoT Web Application" | "Vercel" | "Figma" | "Wordpress" | "Web" | "Full Stack Web" | "Mobile" | "Desktop" | "AI Integration" | "Web Application" | "Mobile & Web App";
 }[] = [
 		{
-			name: "Optibyte Building Management System (BMS)",
+			name: "Building Management System (BMS)",
 			description:
 				"Problem: Existing BMS product had critical performance issues and lacked real-time visibility. Solution: Redesigned the entire system architecture from scratch. Built data ingestion pipeline handling MQTT messages from 100+ sensors, storing time-series data in InfluxDB. Next.js dashboard provides real-time monitoring for HVAC, STP, WTP, UPS, and Battery systems. Python scripts handle data aggregation and automated report generation.",
 			tags: [
@@ -194,7 +193,6 @@ const projects: {
 			],
 			image: "/company/bms.png",
 			platform: "IoT Web Application",
-			deploy_link: "https://bms.optibyte.com",
 		},
 		{
 			name: "Welding Tracking & Analytics System",
@@ -220,7 +218,6 @@ const projects: {
 			],
 			image: "/company/welding.png",
 			platform: "Mobile & Web App",
-			deploy_link: "https://github.com/yourusername/welding-tracking-system",
 		},
 		{
 			name: "BPO File Allocation & Tracking System",
@@ -242,33 +239,6 @@ const projects: {
 			],
 			image: "/company/erpallocation.png",
 			platform: "Web Application",
-			deploy_link: "https://github.com/yourusername/bpo-erp-system",
-		},
-		{
-			name: "TRB TNPSC Online Exam Platform",
-			description:
-				"Problem: Need for scalable online examination platform with mobile support for competitive exam preparation. Solution: Built complete system with role-based dashboards for Admin, Faculty, and Students. Flutter mobile app for exam-taking with offline support. Web portal handles question bank management, scheduling, and automated result processing. Firebase for real-time sync.",
-			tags: [
-				{
-					name: "flutter",
-					color: "blue-text-gradient",
-				},
-				{
-					name: "nextjs",
-					color: "pink-text-gradient",
-				},
-				{
-					name: "mongodb",
-					color: "green-text-gradient",
-				},
-				{
-					name: "firebase",
-					color: "blue-text-gradient",
-				},
-			],
-			image: "/company/trb.png",
-			platform: "Mobile & Web App",
-			deploy_link: "https://github.com/yourusername/trb-tnpsc-exam",
 		},
 		{
 			name: "Insurance Claim Management System",
@@ -294,7 +264,6 @@ const projects: {
 			],
 			image: "/company/hms.jpg",
 			platform: "Full Stack Web",
-			deploy_link: "https://github.com/yourusername/insurance-claim-system",
 		},
 		{
 			name: "AI-Powered Smart Reply System",
@@ -316,7 +285,6 @@ const projects: {
 			],
 			image: "/company/gbs.webp",
 			platform: "AI Integration",
-			deploy_link: "https://github.com/yourusername/smart-reply-system",
 		},
 	];
 
