@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Indian M - Resume</title>
+<style>
+  @page { size: A4; margin: 10mm 12mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10pt;
+    line-height: 1.18;
+    color: #000;
+    margin: 0;
+  }
+  .name {
+    text-align: center;
+    font-size: 22pt;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    margin: 0 0 3pt 0;
+  }
+  .contact {
+    text-align: center;
+    font-size: 10pt;
+    margin: 0 0 10pt 0;
+  }
+  h2 {
+    font-size: 11pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin: 7pt 0 1pt 0;
+    padding: 0 0 1pt 0;
+    border-bottom: 0.7pt solid #000;
+  }
+  p.summary { margin: 3pt 0 0 0; text-align: justify; }
+  .entry { margin-top: 4pt; }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10pt;
+  }
+  .row .left { font-weight: bold; }
+  .row .right { font-weight: bold; white-space: nowrap; }
+  .row.sub .left { font-weight: normal; font-style: italic; }
+  .row.sub .right { font-weight: normal; font-style: italic; white-space: nowrap; }
+  .proj .left { font-weight: bold; }
+  .proj .left .stack { font-weight: normal; font-style: italic; }
+  .proj .right { font-weight: normal; white-space: nowrap; }
+  ul { margin: 1.5pt 0 0 0; padding-left: 15pt; }
+  li { margin: 0 0 1pt 0; text-align: left; }
+  .skills { margin-top: 3pt; }
+  .skills div { margin-bottom: 1.5pt; }
+  .skills b { font-weight: bold; }
+</style>
+</head>
+<body>
+
+  <div class="name">Indian M</div>
+  <div class="contact">+91-9361072610 | indiantechdigi@gmail.com | linkedin.com/in/indian-m</div>
+
+  <h2>Summary</h2>
+  <p class="summary">Full Stack &amp; IoT Engineer with 2 years of experience specializing in production-grade web applications, mobile apps, and real-time IoT platforms like BMS and ERP systems. Proven expertise in building industrial automation software and AI-driven solutions using Java, C#, .NET Core, Flutter, and Python. Sustained results by contributing scalable solutions supporting 500+ users with 99.9% uptime.</p>
+
+  <h2>Education</h2>
+  <div class="entry">
+    <div class="row"><span class="left">Park College of Engineering</span><span class="right">Coimbatore, Tamil Nadu</span></div>
+    <div class="row sub"><span class="left">Bachelor of Engineering in Computer Science; CGPA: 7.4/10</span><span class="right">Aug. 2020 &ndash; May 2024</span></div>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="left">Government Higher Secondary School</span><span class="right">Krishnagiri, Tamil Nadu</span></div>
+    <div class="row sub"><span class="left">Higher Secondary (12th); 70%</span><span class="right">Jun. 2019 &ndash; May 2020</span></div>
+  </div>
+
+  <h2>Experience</h2>
+  <div class="entry">
+    <div class="row"><span class="left">Sustainabyte Private Limited</span><span class="right">Chennai, Tamil Nadu</span></div>
+    <div class="row sub"><span class="left">Full Stack Software Engineer</span><span class="right">Dec. 2024 &ndash; Present</span></div>
+    <ul>
+      <li>Spearheaded full-stack SaaS modules using Next.js, Spring Boot, and .NET Core to support 500+ active concurrent users.</li>
+      <li>Incorporated Azure and AWS cloud services via custom C# and Java APIs to process over 10,000 data records daily.</li>
+      <li>Architected IoT data pipelines using MQTT and InfluxDB for real-time dashboards, reducing system response latency by 35%.</li>
+      <li>Ensured high-availability RESTful microservices using .NET and Spring Boot, maintaining a consistent 99.9% uptime record.</li>
+    </ul>
+  </div>
+  <div class="entry">
+    <div class="row"><span class="left">Xentrix High-Tech Private Limited</span><span class="right">Coimbatore, Tamil Nadu</span></div>
+    <div class="row sub"><span class="left">Software Engineer</span><span class="right">Dec. 2023 &ndash; Oct. 2024</span></div>
+    <ul>
+      <li>Developed backend services with Spring Boot and Node.js, handling 5,000+ daily requests with sub-200ms response times.</li>
+      <li>Automated internal ERP and BPO workflows using Java, resulting in a 45% reduction in manual processing requirements.</li>
+      <li>Orchestrated microservice deployment using Docker across the full software development life cycle (SDLC).</li>
+    </ul>
+  </div>
+
+  <h2>Projects</h2>
+  <div class="entry proj">
+    <div class="row"><span class="left">Energy Management System (BMS) <span class="stack">| .NET Core, C#, Next.js, Azure, MQTT, InfluxDB</span></span><span class="right">2025</span></div>
+    <ul>
+      <li>Designed software-centric BMS architecture using .NET Core for real-time MQTT data ingestion and processing for 50+ devices.</li>
+      <li>Built interactive Next.js dashboards for monitoring energy consumption, achieving ~25% improvement in efficiency.</li>
+    </ul>
+  </div>
+  <div class="entry proj">
+    <div class="row"><span class="left">ERP Platform for BPO Operations <span class="stack">| Java, Spring Boot, Next.js, MongoDB</span></span><span class="right">2024</span></div>
+    <ul>
+      <li>Developed custom ERP from scratch to automate document processing and BPO file allocation workflows.</li>
+      <li>Built scalable Spring Boot REST APIs and Next.js role-based dashboards to improve operational visibility.</li>
+    </ul>
+  </div>
+  <div class="entry proj">
+    <div class="row"><span class="left">Welding Digitization &amp; Tracking System <span class="stack">| Flutter, Node.js, Next.js, Firebase</span></span><span class="right">2024</span></div>
+    <ul>
+      <li>Built digitization platform to track welding operations, operator activities, and production reports.</li>
+      <li>Developed Flutter app for floor data entry and Next.js dashboard for analytics with Firebase real-time integration.</li>
+    </ul>
+  </div>
+  <div class="entry proj">
+    <div class="row"><span class="left">Welding Interlocking System <span class="stack">| Flutter, C#, MQTT, Bluetooth</span></span><span class="right">2024</span></div>
+    <ul>
+      <li>Developed Flutter app and C# backend to manage welding machine interlocking and access control via MQTT.</li>
+      <li>Implemented real-time device status monitoring and controlled machine operation based on authorization rules.</li>
+    </ul>
+  </div>
+  <div class="entry proj">
+    <div class="row"><span class="left">Smart Reply Automation System <span class="stack">| Python, Node.js, Next.js, AI API</span></span><span class="right">2024</span></div>
+    <ul>
+      <li>Developed AI-assisted reply system using Python and Node.js to handle repetitive customer queries via third-party AI APIs.</li>
+      <li>Improved response efficiency by automating high-volume support workflows using context-aware responses.</li>
+    </ul>
+  </div>
+
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <div><b>Languages:</b> Java, C#, JavaScript, Python, Dart, HTML/CSS, SQL</div>
+    <div><b>Frameworks:</b> .NET Core, Spring Boot, Node.js, React, Next.js, Flutter, Tailwind CSS</div>
+    <div><b>Databases:</b> MongoDB, PostgreSQL, MySQL, InfluxDB, Firebase, Redis</div>
+    <div><b>Cloud &amp; DevOps:</b> Azure, AWS, Docker, Git, CI/CD, MQTT, Vercel</div>
+    <div><b>Technologies:</b> REST APIs, Microservices, IoT, AI APIs, Bluetooth, WebSocket</div>
+  </div>
+
+</body>
+</html>
